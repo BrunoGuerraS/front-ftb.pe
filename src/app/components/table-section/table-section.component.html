@@ -1,123 +1,20 @@
 <div class="w-full mb-20 text-white">
   <div class="w-[80%] mx-auto">
-    <div class="py-5 grid grid-cols-5 justify-items-center bg-primary rounded-t-xl" >
-      <h2>Fecha</h2>
+    <div
+      class="py-5 grid grid-cols-5 justify-items-center bg-primary rounded-t-xl"
+    >
+      <h2>Codigo unico</h2>
       <h2>Descripcion</h2>
+      <h2>Fecha</h2>
       <h2>Moneda</h2>
       <h2>Monto</h2>
-      <h2>Codigo unico</h2>
     </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#d0bfff] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-    </div>
-    <div class="grid grid-cols-5 justify-items-center py-3 bg-[#ede7f6] ">
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
-      <p>default</p>
+    <div *ngFor="let item of data" class="row_table">
+      <p>{{ item.codigo_unico }}</p>
+      <p>{{ item.descripcion }}</p>
+      <p>{{ item.fecha }}</p>
+      <p>{{ item.moneda }}</p>
+      <p>{{ item.monto }}</p>
     </div>
   </div>
 </div>

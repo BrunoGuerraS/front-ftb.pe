@@ -1,0 +1,15 @@
+.row_table {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center;
+  padding: 1.5rem 0;
+  background-color: #d0bfff;
+  color: #666;
+
+}
+.row_table:nth-child(odd){
+  background-color: #ede7f6;
+}
+.row_table:nth-last-child(1){
+  border-radius: 0 0 10px 10px;
+}

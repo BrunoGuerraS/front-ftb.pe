@@ -16,6 +16,7 @@ export class LoginFormComponent implements OnInit {
   isPasswordInvalid: any = false;
   constructor(
     private AuthService: AuthService,
+
   ) {}
   ngOnInit(): void {}
   get emailField(){

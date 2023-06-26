@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FileService } from 'src/app/service/file.service';
+import { ShareDataService } from 'src/app/service/shareData/share-data.service';
 
 @Component({
   selector: 'app-input-file',
@@ -8,12 +10,16 @@ import { Component } from '@angular/core';
 export class InputFileComponent {
   upData = {
     icon: '../../../assets/subir.png',
-    fileName: 'descargue o arrastre el documento aquí'
+    fileName: 'suba o arrastre el documento aquí'
   }
   isDragOver: boolean = false;
   readyToSend: boolean = false;
   file: any;
-  constructor() {}
+  fileFormated: any
+  constructor(
+    private fileService: FileService,
+    private  shareDataService: ShareDataService
+  ) {}
   handleDragOver(event: DragEvent) {
     event.preventDefault();
     this.isDragOver = true;
@@ -32,6 +38,13 @@ export class InputFileComponent {
     console.log('handleDrop',event.dataTransfer?.files[0])
     this.isDragOver = false;
     this.readyToSend = true;
-
+  }
+  sendFile(){
+    console.log('enviando data')
+    const formData = new FormData()
+    formData.append('file', this.file)
+    this.fileService.uploadFile(formData).subscribe((res)=>{
+      this.shareDataService.putData(res)
+    })
   }
 }

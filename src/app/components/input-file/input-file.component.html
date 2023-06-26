@@ -1,7 +1,6 @@
 <div class="w-full mb-10">
   <form
     class="flex flex-col justify-center items-center w-[370px] mx-auto"
-    action=""
   >
     <div
       class="relative file-container rounded-xl"
@@ -25,8 +24,9 @@
     </div>
     <button
       class="w-[100%] bg-secondary text-white rounded-lg"
+      type="button"
       [ngClass]="{ ready: readyToSend }"
-      type="submit"
+      (click)="sendFile()"
     >
       <p class="my-3">LISTAR</p>
     </button>
