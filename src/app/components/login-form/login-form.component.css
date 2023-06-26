@@ -1,0 +1,8 @@
+.btn-stl:active{
+  background-color: white;
+  border: 1px solid #6101ea;
+}
+
+.btn-stl:active p {
+  color: #6101ea;
+}

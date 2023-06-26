@@ -1,0 +1,34 @@
+<div class="w-full mb-10">
+  <form
+    class="flex flex-col justify-center items-center w-[370px] mx-auto"
+    action=""
+  >
+    <div
+      class="relative file-container rounded-xl"
+      [ngClass]="{ over: isDragOver }"
+    >
+      <div
+        class="absolute flex flex-col justify-center items-center w-full h-full"
+      >
+        <img class="w-20" [src]="upData.icon" alt="" />
+        <p class="file-info text-secondary font-bold" [ngClass]="{ textReady: readyToSend }">
+          {{ upData.fileName }}
+        </p>
+      </div>
+      <input
+        class="file-stl"
+        type="file"
+        (dragover)="handleDragOver($event)"
+        (dragleave)="handleDragLeave($event)"
+        (drop)="handleDrop($event)"
+      />
+    </div>
+    <button
+      class="w-[100%] bg-secondary text-white rounded-lg"
+      [ngClass]="{ ready: readyToSend }"
+      type="submit"
+    >
+      <p class="my-3">LISTAR</p>
+    </button>
+  </form>
+</div>

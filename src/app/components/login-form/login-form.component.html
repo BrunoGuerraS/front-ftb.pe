@@ -1,0 +1,38 @@
+<div class="bg-white w-[450px] overflow-hidden rounded-xl">
+  <div class="my-10 flex flex-col justify-center items-center">
+    <h2 class="text-xl uppercase text-[#9f93aa]">Inicia sesión</h2>
+  </div>
+
+  <form
+    [formGroup]="form"
+    class="flex flex-col justify-center px-10"
+    (ngSubmit)="onSubmit($event)"
+  >
+    <!-- {{ emailField?.value }} {{ emailField?.valid }} {{emailField?.touched}} {{emailField?.invalid}} -->
+    <div *ngIf="isEmailInvalid" class="text-red-500">
+      required
+    </div>
+    <input
+      formControlName="email"
+      class="border border-b-[#6101ea] pl-5 pt-4 pb-2 mb-7 bg-[#ede7f6]"
+      type="email"
+      placeholder="Email"
+    />
+    <div *ngIf="isPasswordInvalid" class="text-red-500">
+      required
+    </div>
+    <input
+      formControlName="password"
+      class="border border-b-[#6101ea] pl-5 pt-4 pb-2 mb-5 bg-[#ede7f6]"
+      type="password"
+      placeholder="Password"
+    />
+
+    <button
+      type="submit"
+      class="bg-[#6101ea] mt-5 mb-10 px-10 py-3 rounded-3xl btn-stl"
+    >
+      <p class="text-white font-bold">INGRESAR</p>
+    </button>
+  </form>
+</div>

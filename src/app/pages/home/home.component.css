@@ -1,0 +1,17 @@
+.hight-cal{
+  height: calc(100vh - 70px);
+  /* background-color: papayawhip; */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.dot-bg-custom{
+  background-image: url("../../../assets/dot.jpg");
+  background-size: 320px;
+  background-repeat: repeat;
+}
